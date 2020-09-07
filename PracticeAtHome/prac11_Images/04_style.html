@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Width/Height Attributes or Style?</h2>
+
+    <p>
+        첫 번째 이미지는 폭 속성(128픽셀로 설정)을 사용하지만,
+        헤드 섹션의 스타일이 이를 무시하고 폭을 100%로 설정한다.
+    </p>
+    <img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+    
+    <p>
+        두 번째 이미지는 스타일 속성을 사용하여 너비를 128픽셀로 설정하며,
+        헤드 섹션의 스타일에 의해 오버라이드 되지않는다.
+    </p>
+    <img src="html5.gif" alt="HTML% Icon" style="width: 128px;height: 128px;">
+</body>
+</html>
