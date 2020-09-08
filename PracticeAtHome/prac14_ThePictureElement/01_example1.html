@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The picture Element</h2>
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="img_car.jpg">
+        <source media="(min-width: 465px)" srcset="img_food.jpg">
+        <img src="img_girl.jpg" style="width: auto;">
+    </picture>
+
+    <p>
+        서로 다른 뷰포트 크기로 사진 로드 버전을 보려면 브라우저 크기를 조정하세요.
+        브라우저는 미디어 쿼리가 사용자의 현재 뷰포트와 일치하는
+        첫 번째 소스 요소를 찾습니다. 그리고 srcset 속성에 지정된 이미지를 가져옵니다.
+    </p>
+</body>
+</html>
