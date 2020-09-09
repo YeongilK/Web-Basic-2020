@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {width: 100%;}
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        #t01 tr:nth-child(even) {
+            background-color: red;
+        }
+        #t01 tr:nth-child(odd) {
+            background-color: blue;
+        }
+        #t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Styling Tables</h2>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>Yeongil</td>
+            <td>Kim</td>
+            <td>27</td>
+        </tr>
+    </table><br><br><br>
+
+    <table id="t01">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>Yeongil</td>
+            <td>Kim</td>
+            <td>27</td>
+        </tr>
+    </table>
+    <br>
+    <p><b>"#t01 th"</b> : 헤더 셀이 있는 행의 속성을 지정</p>
+    <p>
+    #t01 th { background-color: black; color: white; }
+    ==> <b>t01테이블의 제목 행 배경색을 검정, 글 색을 흰색으로 지정</b>
+    </p><br>
+
+    <p><b>"#t01 tr:nth-child(even)"</b> : 짝수번째 행의 속성을 지정</p>
+    <p>
+    #t01 tr:nth-child(even) { background-color: red; }
+    ==> <b>t01테이블의 짝수번째 행의 배경 색을 빨간색으로 지정</b>
+    </p><br>
+    
+    <p><b>"#t01 tr:nth-child(odd)"</b> : 홀수번째 행의 속성을 지정</p>
+    <p>#t01 tr:nth-child(odd) { background-color: blue; }
+    ==> <b>t01테이블의 홀수번째 행의 배경 색을 파란색으로 지정</b>
+    </p>
+</body>
+</html>
