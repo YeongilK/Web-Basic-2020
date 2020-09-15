@@ -1,0 +1,7 @@
+body { background-color: aliceblue; }
+header { border-bottom-style: solid; border-bottom-width: 1px; }
+h1 { color: brown; text-align: center; }
+p { font-family: 휴먼편지체; font-size: 18px; text-indent: 1em; }
+form { background-color: palevioletred; margin-left: 15px; margin-right: 15px; }
+label { font-family: 휴먼편지체; }
+footer { background: orange; border-radius: 10px; margin-left: 5px; margin-right: 5px; }
