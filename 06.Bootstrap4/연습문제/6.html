@@ -12,7 +12,7 @@
 <body style="background-color: aliceblue;">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="text-danger text-center">스마트폰</h1>      
+            <h1 class="text-danger text-center" id="top">스마트폰</h1>      
             <p style="font-family: 휴먼편지체;">
                 스마트폰은 컴퓨터를 결합한 무선 휴대전화기이다. PC에서 실행되는
                 운영체제보다 작게 만든 모바일 운영체제를 탑재하여 인터넷 검색,
@@ -25,13 +25,23 @@
         <div class="row">
             <div class="col-2">
                 <h2 id="contents" class="text-primary">목차</h2>
-                <div class="list-group bg-secondary">
-                    <a href="#history" class="list-group-item list-group-item-action">역사</a>
-                    <a href="#android" class="list-group-item list-group-item-action">안드로이드</a>
-                    <a href="#iphone" class="list-group-item list-group-item-action">아이폰</a>
-                    <a href="#sample" class="list-group-item list-group-item-action">샘플</a>
-                    <a href="#newphone" class="list-group-item list-group-item-action">2020년 출시</a>
-                </div>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history">역사</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#android">안드로이드</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#iphone">아이폰</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sample">샘플</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#newphone">2020년 출시</a>
+                    </li>
+                </ul>
             </div>
 
             <div class="col-10">
@@ -51,7 +61,7 @@
                     제품으로 여겨져 있으나 당시에는 믿기지 못할 정도로 기능이
                     고급이었다고 평가 받았다.
                 </p>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='6.html'">Top</button>
+                <button type="button" class="btn btn-outline-dark" onclick="location.href='#top'">Top</button>
                 <br><br>
                 <h2 id="android" class="text-primary">
                     <a href="http://ko.wikipedia.org/wiki/안드로이드_(운영_체제)">안드로이드</a>
@@ -81,7 +91,7 @@
                     플레이를 제공하고 있으며, 이와 별도로 각 제조사 혹은 통신사별 응용
                     프로그램 마켓이 함께 운영되고 있다.
                 </p>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='6.html'">Top</button>
+                <button type="button" class="btn btn-outline-dark" onclick="location.href='#top'">Top</button>
                 <br><br>
                 <h2 id="iphone" class="text-primary">
                     <a href="http://ko.wikipedia.org/wiki/아이폰">아이폰</a>
@@ -111,14 +121,14 @@
                     아이폰은 구글의 안드로이드와 함께 세계 최대의 2대 스마트폰 플랫폼
                     가운데 하나이다.
                 </p>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='6.html'">Top</button>
+                <button type="button" class="btn btn-outline-dark" onclick="location.href='#top'">Top</button>
                 <br><br>
                 <h2 id="sample" class="text-primary">샘플</h2>
                 <table class="table table-bordered"  style="text-align: center;">
                     <thead><tr><th>스마트폰샘플</th></tr></thead>
                     <tbody><tr><td><img src="smartphone.jpg"></td></tr></tbody>
                 </table>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='6.html'">Top</button>
+                <button type="button" class="btn btn-outline-dark" onclick="location.href='#top'">Top</button>
                 <br><br>
                 <h2 id="newphone" class="text-primary">2020년 출시 스마트폰</h2><br>
                 <table class="table table-bordered">
@@ -211,7 +221,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='6.html'">Top</button><br><br>
+                <button type="button" class="btn btn-outline-dark" onclick="location.href='#top'">Top</button><br><br>
                 <p class="bg-warning" style="border-radius: 10px;">Copyright 2020 by Wikipedia</p>
             </div>
         </div>
