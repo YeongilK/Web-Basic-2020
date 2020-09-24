@@ -4,9 +4,11 @@ function callThreeTimes(callback) {
         callback();
     }
 }
+
 // 정상 실행
 callThreeTimes(function() {
     console.log('호출!');
 });
+
 //예외 발생
 callThreeTimes();

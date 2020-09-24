@@ -15,5 +15,4 @@ function callThreeTimes(callback) {
 callThreeTimes(function() {
     console.log('호출!');
 });
-    
 callThreeTimes();
