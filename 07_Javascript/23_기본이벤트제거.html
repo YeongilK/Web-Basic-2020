@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 이벤트 제거</title>
+    <script>
+        window.onload = function() {
+            // 문서 객체 선택
+            let button = document.getElementById('button');
+
+            // 이벤트 연결
+            button.onclick = function() {
+                return false;
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="button" onclick="locatin.href='http://hanbit.co.kr'">한빛</button>
+    <!-- <a id="button" href="http://hanbit.co.kr">한빛</a> -->
+</body>
+</html>

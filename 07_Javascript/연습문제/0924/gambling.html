@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambling</title>
+    <script>
+        let clickCount = 0;
+        let numbers = [];
+        let count = 0;
+        let money = 10000;
+        let successMoney = 50000;
+
+        function change(id) {
+            let imgDOM = document.getElementById(id);
+            let random = Math.floor(Math.random() * 3);
+            imgDOM.src = `img/${random}.png`;
+            clickCount++;
+            numbers.push(random);
+            if (clickCount === 3) {
+                setTimeout(function() {
+                    playGame();
+                }, 1500);
+            }
+        }
+
+        function playGame() {
+            if (numbers[0] === numbers[1] && numbers[0] === numbers[2]) {
+                money += 8000;
+            } else {
+                money -= 1000;
+            }
+            if (money === 0) {
+                alert('게임 머니를 모두 소진했습니다. 리셋됩니다.');
+                money = 10000;
+                count = 0;
+            } else if (money !== 0) {
+                count++;
+                if (money >= successMoney) {
+                    alert(`축하합니다!! ${successMoney}원 달성!! 리셋됩니다.`);
+                    money = 10000;
+                    count = 0;
+                }
+                if (count === 30) {
+                    alert(`축하합니다!! 성공 횟수 달성!! 리셋됩니다.`);
+                    money = 10000;
+                    count = 0;
+                }
+            }
+
+            let moneyDOM = document.getElementById('money');
+            let countDOM = document.getElementById('count');
+            let firstDOM = document.getElementById('first');
+            let secondDOM = document.getElementById('second');
+            let thirdDOM = document.getElementById('third');
+            moneyDOM.innerHTML = `${money/1000},000`;
+            countDOM.innerHTML = count;
+            firstDOM.src = 'img/question.jpg';
+            secondDOM.src = 'img/question.jpg';
+            thirdDOM.src = 'img/question.jpg';
+            clickCount = 0;
+            numbers = [];
+        }
+    </script>
+</head>
+<body>
+    <h3><strong>갬블링 게임</strong></h3>
+    <hr>
+    <p>게임 머니: <span id="money" style="color: red;">10,000</span>원, 
+       횟수: <span id="count" style="color: red;">0</span>회</p>
+    <br>
+    <img id="first" onclick="change('first');" src="img/question.jpg" style="margin-right: 30px; width: 100px; height: 170px; cursor: pointer;">
+    <img id="second" onclick="change('second');" src="img/question.jpg" style="margin-right: 30px; width: 100px; height: 170px; cursor: pointer;">
+    <img id="third" onclick="change('third');" src="img/question.jpg" style="width: 100px; height: 170px; cursor: pointer;">
+</body>
+</html>
